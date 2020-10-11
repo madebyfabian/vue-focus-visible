@@ -20,11 +20,7 @@
   ],
   "license": "MIT",
   "main": "dist/vue-focus-visible.common.js",
-  "module": "dist/vue-focus-visible.umd.js",
-  "unpkg": "dist/vue-focus-visible.umd.min.js",
-  "browser": {
-    "./sfc": "src/FocusVisible.vue" 
-  },
+  "browser": "dist/vue-focus-visible.umd.js",
   "files": [
     "dist/*"
   ],
