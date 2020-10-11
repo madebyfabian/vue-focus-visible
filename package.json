@@ -1,5 +1,5 @@
 {
-  "name": "vue-a11y-focus-util",
+  "name": "vue-focus-visible",
   "description": "✨ Automagically manage the visibility of :focus states in your app, showing them when a user uses your app with a keyboard/screen reader/etc. and hiding it when the user is only using the mouse.",
   "version": "1.0.0",
   "private": false,
@@ -8,17 +8,17 @@
     "email": "hello@madebyfabian.com",
     "url": "https://madebyfabian.com"
   },
-  "repository": "https://github.com/madebyfabian/vue-a11y-focus-util",
-  "bugs": "https://github.com/madebyfabian/vue-a11y-focus-util/issues",
+  "repository": "https://github.com/madebyfabian/vue-focus-visible",
+  "bugs": "https://github.com/madebyfabian/vue-focus-visible/issues",
   "keywords": [ "vue", "vuejs", "a11y", "accessibility", "utility", "plugin" ],
   "license": "MIT",
-  "main" : "./dist/vue-a11y-focus-util.common.js",
+  "main" : "./dist/vue-focus-visible.common.js",
   "files": [ 
     "dist/*"
   ],
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "vue-cli-service build --name vue-a11y-focus-util --target lib --entry ./src/A11yFocusUtil.ts"
+    "build": "vue-cli-service build --name vue-focus-visible --target lib --entry ./src/A11yFocusUtil.ts"
   },
   "dependencies": {
     "core-js": "^3.6.5",
