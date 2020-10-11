@@ -10,19 +10,32 @@
   },
   "repository": "https://github.com/madebyfabian/vue-focus-visible",
   "bugs": "https://github.com/madebyfabian/vue-focus-visible/issues",
-  "keywords": [ "vue", "vuejs", "a11y", "accessibility", "utility", "plugin" ],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "a11y",
+    "accessibility",
+    "utility",
+    "plugin"
+  ],
   "license": "MIT",
-  "main" : "./dist/vue-focus-visible.common.js",
-  "files": [ 
+  "main": "dist/vue-focus-visible.common.js",
+  "module": "dist/vue-focus-visible.umd.js",
+  "unpkg": "dist/vue-focus-visible.umd.min.js",
+  "browser": {
+    "./sfc": "src/FocusVisible.vue" 
+  },
+  "files": [
     "dist/*"
   ],
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "vue-cli-service build --name vue-focus-visible --target lib --entry ./src/A11yFocusUtil.ts"
+    "build": "vue-cli-service build --name vue-focus-visible --target lib --entry ./src/FocusVisible.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-visible-focus": "0.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
