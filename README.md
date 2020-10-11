@@ -1,7 +1,7 @@
 # Vue Focus Visible 🙌👩‍🦽💪
 ![Supports Vue.js 2.x](https://img.shields.io/badge/Vue.js-2.x-brightgreen "Supports Vue.js 2.x")
 [![0 Dependencies](https://img.shields.io/badge/Zero-Dependencies-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
-[![NPM Version](https://img.shields.io/badge/npm-v1.0.2-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
+[![NPM Version](https://img.shields.io/badge/npm-v1.0.3-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
 [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
 > ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudoselector behaviour.
@@ -54,7 +54,7 @@ This package does not modify your stylings by default, but if you wish to, you c
     outline: none!important
   }
 
-  [focus-visible] :focus { 
+  [focus-visible=true] :focus { 
     box-shadow: 0 0 0 2px #0498fb!important
   }
 </style>
