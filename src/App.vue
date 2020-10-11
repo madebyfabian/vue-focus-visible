@@ -70,10 +70,6 @@
 </script>
 
 <style lang="scss">
-  :root {
-    --test-color: red;
-  }
-
   * {
     box-sizing: border-box;
     font-family: system-ui, 'Segoe UI', Avenir, Helvetica, Arial, sans-serif;
