@@ -16,7 +16,7 @@ npm i vue-focus-visible
 ```
 
 Then include it into your application, the best place may be `src/App.vue`
-```
+```vue
 <template>
   <FocusVisible>
     ... 
@@ -39,7 +39,7 @@ Then include it into your application, the best place may be `src/App.vue`
 ## Styling
 
 This package does not modify your stylings by default, but if you wish to, you can include this into your `src/App.vue`.
-```
+```vue
 ...
 <script>
   import FocusVisible from 'vue-focus-visible'
@@ -47,7 +47,7 @@ This package does not modify your stylings by default, but if you wish to, you c
   ...
 ```
 
-```
+```vue
 <style>
   :focus { 
     box-shadow: none!important; 
@@ -62,7 +62,7 @@ This package does not modify your stylings by default, but if you wish to, you c
 
 as you've seen in the CSS, this package adds a property, `focus-visible` (which is either `true` or `false`), directly above your application.
 This is how it looks in the end:
-```
+```vue
 <html lang="en">
   <head>...</head>
   <body>
@@ -77,7 +77,7 @@ This is how it looks in the end:
 
 ## API
 You can customize the element that is being returned with
-```
+```vue
 <template>
   <FocusVisible elType="...">
   ...
