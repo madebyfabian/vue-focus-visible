@@ -10,7 +10,6 @@ type A11yFocusUtilOptions = {
 
 export const A11yFocusUtil = ( Vue: typeof _Vue, options: A11yFocusUtilOptions = {} ) => {
   options = validateOptions(options)
-  console.log({ validatedOptions: options })
 
   createStyles(options)
   changeFocusMode()
@@ -63,11 +62,7 @@ const changeFocusMode = ( options = { enableFocus: true } ) => {
 const createStyles = ( options: A11yFocusUtilOptions ) => {
   let styleTag = document.createElement('style')
   styleTag.appendChild(document.createTextNode(`
-    *:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px ${options.focusColor};
-    }
-
+    *:focus { outline: none; box-shadow: 0 0 0 ${options.focusWidth} ${options.focusColor}; }
     ${generateDisabledFocusSelector()} { box-shadow: none; }
   `))
   document.head.appendChild(styleTag)
