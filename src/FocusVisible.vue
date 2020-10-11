@@ -1,7 +1,7 @@
 <template>
   <div
     v-bind:is="elType"
-    :focus-visible="focusVisible || null"
+    :focus-visible="focusVisible"
     @mousedown="handleMousedown"
     @compositionstart="handleCompositionstart"
     @touchstart="handleTouchstart">
