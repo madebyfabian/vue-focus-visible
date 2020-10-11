@@ -125,3 +125,4 @@ Just hit me via an GitHub Issue.
 
 ## Contributing
 If you want to, just fork this repo and create a PR if you like to add/improve something!
+Also special thanks to (filoxo)[https://github.com/filoxo] for creating a similar solution, but it didn't quite fit to what I needed.
