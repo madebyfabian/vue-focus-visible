@@ -1,4 +1,4 @@
-# Vue A11Y Focus Util 🙌👩‍🦽💪
+# Vue Focus Visible 🙌👩‍🦽💪
 ![Supports Vue.js 2.x](https://img.shields.io/badge/Vue.js-2.x-brightgreen "Supports Vue.js 2.x")
 [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
