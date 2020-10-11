@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { A11yFocusUtil } from './A11yFocusUtil'
+import { VueFocusVisible } from './VueFocusVisible'
 
 Vue.config.productionTip = false
 
-Vue.use(A11yFocusUtil)
+Vue.use(VueFocusVisible)
 
 new Vue({
   render: h => h(App),

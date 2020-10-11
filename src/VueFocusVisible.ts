@@ -1,14 +1,14 @@
 import _Vue from "vue"
 
-const className = 'has-focus-disabled'
+const className = 'focus-visible'
 
-type A11yFocusUtilOptions = {
+type VueFocusVisibleOptions = {
   focusColor?: string,
   focusWidth?: string | number
 }
 
 
-export const A11yFocusUtil = ( Vue: typeof _Vue, options: A11yFocusUtilOptions = {} ) => {
+export const VueFocusVisible = ( Vue: typeof _Vue, options: VueFocusVisibleOptions = {} ) => {
   options = validateOptions(options)
 
   createStyles(options)
@@ -28,8 +28,8 @@ export const A11yFocusUtil = ( Vue: typeof _Vue, options: A11yFocusUtilOptions =
 }
 
 
-const validateOptions = ( options: A11yFocusUtilOptions ) => {
-  let validatedOptions: A11yFocusUtilOptions = {}
+const validateOptions = ( options: VueFocusVisibleOptions ) => {
+  let validatedOptions: VueFocusVisibleOptions = {}
 
   // Validate "focusColor"
   let s = <any>new Option().style
@@ -59,7 +59,7 @@ const changeFocusMode = ( options = { enableFocus: true } ) => {
 /**
  * Creates all the neccessary styles for the focus to work.
  */
-const createStyles = ( options: A11yFocusUtilOptions ) => {
+const createStyles = ( options: VueFocusVisibleOptions ) => {
   let styleTag = document.createElement('style')
   styleTag.appendChild(document.createTextNode(`
     *:focus { outline: none; box-shadow: 0 0 0 ${options.focusWidth} ${options.focusColor}; }
