@@ -1,12 +1,12 @@
 # Vue Focus Visible 🙌👩‍🦽💪
 ![Supports Vue.js 2.x](https://img.shields.io/badge/Vue.js-2.x-brightgreen "Supports Vue.js 2.x")
 [![0 Dependencies](https://img.shields.io/badge/Zero-Dependencies-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
-[![NPM Version](https://img.shields.io/badge/npm-v1.0.5-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
+[![NPM Version](https://img.shields.io/badge/npm-v1.0.6-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
 [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
 > ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudoselector behaviour.
 
-Do you know that problem when you have custom `:focus` styles, but they're also getting applied on button click 😒? Enough of that! Just install and include this component and you'll have a new property `focus-visible` which you can select via CSS. Examples are below.
+Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this component and you'll have a new attribute `focus-visible` which you can select via CSS. Examples are below.
 
 
 ## Installation
@@ -38,14 +38,18 @@ Then include it into your application, the best place may be `src/App.vue`
 
 ## Styling
 
-This package does not modify your stylings by default, but if you wish to, you can include this into your `src/App.vue`.
+This package does not modify your stylings by default, but if you wish to, you can include this into your `src/App.vue`:
 ```html
 ...
 <script>
   import FocusVisible from 'vue-focus-visible'
   import 'vue-focus-visible/dist/vue-focus-visible.css'
   ...
+</script>
 ```
+
+__or__, if you want to style everything by yourself, you can use this very basic example styling below.
+This package adds a `focus-visible`-attribute (which can be either `"true"` or `"false"`) onto the `<FocusVisible>` element. You can simply select it and style the focus.
 
 ```html
 <style>
@@ -60,21 +64,6 @@ This package does not modify your stylings by default, but if you wish to, you c
 </style>
 ```
 
-as you've seen in the CSS, this package adds a property, `focus-visible` (which is either `true` or `false`), directly above your application.
-This is how it looks in the end:
-``html
-<html lang="en">
-  <head>...</head>
-  <body>
-    <div focus-visible="true|false">
-      ... 
-      Your App stuff here
-      ...
-    <div>
-  </body>
-</html>
-```
-
 ## API
 You can customize the element that is being returned with
 ```html
@@ -82,6 +71,7 @@ You can customize the element that is being returned with
   <FocusVisible elType="...">
   ...
 ```
+
 ### Options
 <table>
   <thead>
@@ -120,9 +110,10 @@ Normally you don't have to deal with this, but if you want to make any contribut
 
 
 ## Feature requests? 😊 Questions?
-Just hit me via an GitHub Issue.
+Just hit me via a GitHub Issue.
 
 
 ## Contributing
 If you want to, just fork this repo and create a PR if you like to add/improve something!
+<br>
 Also special thanks to [filoxo](https://github.com/filoxo) for creating a similar solution, but it didn't quite fit to what I needed.
