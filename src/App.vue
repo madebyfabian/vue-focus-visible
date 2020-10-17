@@ -74,6 +74,22 @@
 </script>
 
 <style lang="scss">
+  
+</style>
+
+<style lang="scss">
+  /** NEEDED STYLES */
+
+  :focus {
+    outline: none!important;
+  }
+
+  [focus-visible=true] :focus {
+    box-shadow: 0 0 0 2px #0498FB!important;
+  }
+
+
+
   /** DEMO STYLES */
   
   * {

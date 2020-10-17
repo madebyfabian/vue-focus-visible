@@ -4,9 +4,11 @@
 [![NPM Version](https://img.shields.io/badge/npm-v1.0.6-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
 [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
-> ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudoselector behaviour.
+> ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudo-selector behaviour.
 
 Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this component and you'll have a new attribute `focus-visible` which you can select via CSS. Examples are below.
+
+Use this polyfill if you want to use the native `:focus-visible` css pseudo-selector in all browsers, since [Browser Support](https://caniuse.com/css-focus-visible) on it is currently very bad.
 
 
 ## Installation
@@ -53,13 +55,12 @@ This package adds a `focus-visible`-attribute (which can be either `"true"` or `
 
 ```html
 <style>
-  :focus { 
-    box-shadow: none!important; 
-    outline: none!important
+  :focus {
+    outline: none!important;
   }
 
-  [focus-visible=true] :focus { 
-    box-shadow: 0 0 0 2px #0498fb!important
+  [focus-visible=true] :focus {
+    box-shadow: 0 0 0 2px #0498FB!important;
   }
 </style>
 ```

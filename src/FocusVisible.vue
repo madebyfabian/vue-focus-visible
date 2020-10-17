@@ -69,14 +69,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  *:focus {
-    box-shadow: none!important;
-    outline: none!important;
-  }
-
-  [focus-visible=true] :focus {
-    box-shadow: 0 0 0 2px #0498FB!important;
-  }
-</style>
