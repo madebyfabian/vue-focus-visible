@@ -1,7 +1,7 @@
 {
   "name": "vue-focus-visible",
   "description": "✨ Automagically manage the visibility of :focus states in your app, showing them when a user uses your app with a keyboard/screen reader/etc. and hiding it when the user is only using the mouse.",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "private": false,
   "author": {
     "name": "Fabian Beer",
@@ -16,7 +16,8 @@
     "a11y",
     "accessibility",
     "utility",
-    "plugin"
+    "plugin",
+    "vue-plugin"
   ],
   "license": "MIT",
   "main": "dist/vue-focus-visible.common.js",
@@ -26,7 +27,7 @@
   ],
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "vue-cli-service build --name vue-focus-visible --target lib --entry ./src/FocusVisible.vue"
+    "build": "vue-cli-service build --name vue-focus-visible --target lib ./vue-focus-visible.ts"
   },
   "devDependencies": {
     "core-js": "^3.6.5",
