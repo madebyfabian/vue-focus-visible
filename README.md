@@ -1,12 +1,14 @@
 # Vue Focus Visible 🙌👩‍🦽💪
+![Supports Vue.js 3.x](https://img.shields.io/badge/Vue.js-3.x-brightgreen "Supports Vue.js 3.x")
 ![Supports Vue.js 2.x](https://img.shields.io/badge/Vue.js-2.x-brightgreen "Supports Vue.js 2.x")
 [![0 Dependencies](https://img.shields.io/badge/Zero-Dependencies-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
-[![NPM Version](https://img.shields.io/badge/npm-published-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
-[![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
+[![NPM Version](https://badgen.net/npm/v/vue-focus-visible)](https://www.npmjs.com/package/vue-focus-visible)
+[![MIT Licence](https://badgen.net/github/license/madebyfabian/vue-focus-visible)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
 > ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudo-selector behaviour.
+> <br>Supports Vue 3.x out of the box 🎉
 
-Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this component and you'll have a new attribute `v-focus-visible` which you can select via CSS. Examples are below.
+Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this plugin and you'll have a new, native HTML attribute `v-focus-visible` which you can select via CSS. Examples are below.
 
 Use this polyfill if you want to use the native `:focus-visible` css pseudo-selector in all browsers, since [Browser Support](https://caniuse.com/css-focus-visible) on it is currently very bad.
 

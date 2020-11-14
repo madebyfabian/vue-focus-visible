@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-focus-visible.default="true">
+  <div id="app" v-focus-visible>
     <h1>Plugin Demo</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <ul>
@@ -74,7 +74,7 @@
       
       setTimeout(() => {
         // @ts-ignore
-        that.$setFocusVisible(true)
+        that.$setFocusVisible(false)
       }, 2000)
     }
   })
