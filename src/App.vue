@@ -80,11 +80,7 @@
   })
 </script>
 
-<style lang="scss">
-  
-</style>
-
-<style lang="scss">
+<style>
   /** NEEDED STYLES */
 
   :focus {
@@ -118,10 +114,10 @@
     display: flex;
     align-items: center;
     margin: -8px 0;
-    
-    input {
-      margin-right: .5rem;
-    }
+  }
+
+  label input {
+    margin-right: .5rem;
   }
 
   h2 {
