@@ -45,14 +45,14 @@ const handleDirectiveCall = ( el: Element, options: PluginOptions ) => {
       ].includes(target.type))
 
     return setFocusVisible(false)
-  })
-
-  el.addEventListener('compositionstart', () => {
-    setFocusVisible(true)
-  })
+  }, { passive: true })
 
   el.addEventListener('touchstart', () => {
     setFocusVisible(false)
+  }, { passive: true })
+
+  el.addEventListener('compositionstart', () => {
+    setFocusVisible(true)
   })
 
   document.addEventListener('keydown', () => {
