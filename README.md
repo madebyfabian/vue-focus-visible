@@ -121,10 +121,12 @@ or
 
 ## Development
 Normally you don't have to deal with this, but if you want to make any contributions, just clone and download this repo, 
-- `cd` into it
+- install `@vue/cli-service` globally on your machine
+- `cd` into it the cloned repo
 - hit `npm i` to install everything and then
 - `npm start` to start the development server with hot-reload
 - `npm run build` to compile and minify for production (will build everything in the `dist` folder).
+- After this, the package can be publsued to npm
 
 
 ## Feature requests? 😊 Questions?
