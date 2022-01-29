@@ -1,16 +1,19 @@
 # Vue Focus Visible 🙌👩‍🦽💪
 ![Supports Vue.js 3.x](https://img.shields.io/badge/Vue.js-3.x-brightgreen "Supports Vue.js 3.x")
 ![Supports Vue.js 2.x](https://img.shields.io/badge/Vue.js-2.x-brightgreen "Supports Vue.js 2.x")
+![Supports Nuxt.js 3.x](https://img.shields.io/badge/Nuxt.js-3.x-brightgreen "Supports Nuxt.js 3.x")
+![Supports Nuxt.js 2.x](https://img.shields.io/badge/Nuxt.js-2.x-brightgreen "Supports Nuxt.js 2.x")
 [![0 Dependencies](https://img.shields.io/badge/Zero-Dependencies-brightgreen.svg)](https://www.npmjs.com/package/vue-focus-visible)
 [![NPM Version](https://badgen.net/npm/v/vue-focus-visible)](https://www.npmjs.com/package/vue-focus-visible)
 [![MIT Licence](https://badgen.net/github/license/madebyfabian/vue-focus-visible)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
 > ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudo-selector behaviour.
-> <br>Supports Vue 3.x out of the box 🎉
+> <br>Supports Vue 3.x, Nuxt 2.x and 3.x out of the box 🎉
 
 Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this plugin and you'll have a new, native HTML attribute `v-focus-visible` which you can select via CSS. Examples are below.
 
-Use this polyfill if you want to use the native `:focus-visible` css pseudo-selector in all browsers, since [Browser Support](https://caniuse.com/css-focus-visible) on it is currently very bad.
+Use this plugin if you want to polyfill the native `:focus-visible` css pseudo-selector in all browsers which don't support it. 
+<br><br>**Update Jan 2022:** Browser Support is actually pretty decent, except for Safari. [Browser Support on caniuse.com](https://caniuse.com/css-focus-visible)
 
 
 ## 1. Quick start
@@ -19,6 +22,7 @@ First install the package as a dependency of your project.
 npm i vue-focus-visible
 ```
 
+### Vue
 In your `main.js` file, add the plugin like this:
 ```js
 // main.js
@@ -60,6 +64,54 @@ Then include it into your application, the best place may be `src/App.vue`:
 </style>
 ```
 
+### Nuxt 2
+This plugin works exactly like other Vue Plugins in nuxt. Just add it like this:
+
+```js
+// plugins/focusVisible.js
+import Vue from 'vue'
+import FocusVisible from 'vue-focus-visible'
+Vue.use(FocusVisible, { 
+  /* options, see below */
+})
+```
+
+```js
+// nuxt.config.js
+export default {
+  // Other properties
+  plugins: [ 'plugins/focusVisible' ]
+}
+```
+
+### Nuxt 3
+This plugin does work in nuxt3, though the `$setFocusVisible` method is not available as composable at the moment. PRs appreciated :)
+```js
+// plugins/focus-visible.client.js <- IMPORTANT: only works with .client in the filename
+import { defineNuxtPlugin } from '#app'
+import FocusVisible from 'vue-focus-visible'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(FocusVisible)
+})
+```
+
+```js
+// nuxt.config.ts
+export default defineNuxtConfig({
+  // ...
+  vue: {
+    compilerOptions: {
+      directiveTransforms: {
+        'focus-visible': () => ({
+          props: [],
+          needRuntime: true
+        })
+      }
+    }
+  }
+})
+```
 
 ## 2. Options
 By default (on app load), the value of the `v-focus-visible` is always `true`. You can customize that.
