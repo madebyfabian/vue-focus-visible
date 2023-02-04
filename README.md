@@ -7,13 +7,20 @@
 [![NPM Version](https://badgen.net/npm/v/vue-focus-visible)](https://www.npmjs.com/package/vue-focus-visible)
 [![MIT Licence](https://badgen.net/github/license/madebyfabian/vue-focus-visible)](https://github.com/madebyfabian/vue-focus-visible/blob/master/LICENSE.md)
 
+---
+
+**Update Feb 2023:** Browser Support is actually pretty decent now: [Browser Support on caniuse.com](https://caniuse.com/css-focus-visible).
+<br>
+You probably don't need this polyfill anymore.
+
+---
+
 > ✨ Automagically manage the visibility of :focus states in your app — by recreating the :focus-visible pseudo-selector behaviour.
 > <br>Supports Vue 3.x, Nuxt 2.x and 3.x out of the box 🎉
 
 Do you know that problem when you have custom `:focus` styles, but they're also getting applied on click 😒? Enough of that! Just install and include this plugin and you'll have a new, native HTML attribute `v-focus-visible` which you can select via CSS. Examples are below.
 
 Use this plugin if you want to polyfill the native `:focus-visible` css pseudo-selector in all browsers which don't support it. 
-<br><br>**Update Jan 2022:** Browser Support is actually pretty decent, except for Safari. [Browser Support on caniuse.com](https://caniuse.com/css-focus-visible)
 
 
 ## 1. Quick start
